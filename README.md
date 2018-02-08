@@ -1,20 +1,21 @@
-# Génération de pdf à partir de données
+# Pdf generator
 
-Ceci est un petit script en node qui permet de générer un pdf, à partir de données au format json et d'un template twig.
+This is a small nodejs-script that generates a pdf-file, given some data and a [twig](https://twig.symfony.com/) template.
+It uses [wkhtmltopdf](https://wkhtmltopdf.org/).
 
 ### Installation :
 
-* Cloner le projet
+* Clone the projet
 * `npm install`
 
-### Utilisation :
+### Using :
 ```
 node index.js -data data.json -template template.html
 ```
 
 Options :
 
-  * `-data` ou `-D` (obligatoire) : chemin et nom du fichier de données json
-  * `-template` ou `-T` (obligatoire) : chemin et nom du fichier de template
-  * `-css` : chemin du fichier css, si nécessaire
-  * `-out` : chemin du fichier pdf résultant. Par défaut, le fichier créé est out.pdf dans le répertoire racine du script
+  * `-data` or `-D` (mandatory) : path and name of the json data file
+  * `-template` or `-T` (mandatory) : path and name of the template file
+  * `-css` : path and name of the css file, if necessary
+  * `-out` : path and name of the resulting pdf file. By default, the created file is out.pdf in the script root directory.
