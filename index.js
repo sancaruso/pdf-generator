@@ -23,19 +23,35 @@ process.argv.forEach((val, index, arr) => {
 
 if (!dataFile) {
   console.log('No data file specified');
-  return;
+  process.exit(1);
 }
 
 if (!templateFile) {
   console.log('No template file specified');
-  return;
+  process.exit(1);
 }
 
-data = JSON.parse(fs.readFileSync(dataFile, 'utf8'));
-template = fs.readFileSync(templateFile, 'utf8');
+try {
+  data = JSON.parse(fs.readFileSync(dataFile, 'utf8'));
+} catch (e) {
+  console.log(e.message);
+  process.exit(1);
+}
+
+try {
+  template = fs.readFileSync(templateFile, 'utf8');
+} catch (e) {
+  console.log(e.message);
+  process.exit(1);
+}
 
 if (cssFile) {
-  css = fs.readFileSync(cssFile, 'utf8');
+  try {
+    css = fs.readFileSync(cssFile, 'utf8');
+  } catch (e) {
+    console.log(e.message);
+    process.exit(1);
+  }
 }
 
 const renderedTemplate = `<html>
