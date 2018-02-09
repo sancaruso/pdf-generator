@@ -54,4 +54,4 @@ if (cssFile) {
   }
 }
 
-pdfGenerator(data, template, css, out);
+pdfGenerator(data, template, css).pipe(fs.createWriteStream(out));
