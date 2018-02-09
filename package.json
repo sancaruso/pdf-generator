@@ -16,5 +16,5 @@
   "dependencies": {
     "twig": "^1.10.5",
     "wkhtmltopdf": "^0.3.4"
-  },
+  }
 }
