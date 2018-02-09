@@ -1,15 +1,20 @@
 {
-  "name": "test",
+  "name": "template-pdf-generator",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "Generate a pdf from a template and some json data.",
+  "main": "generator.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sancaruso/pdf-generator.git"
+  },
+  "author": "Sandrine Caruso",
   "license": "ISC",
+  "homepage": "https://github.com/sancaruso/pdf-generator",
   "dependencies": {
     "twig": "^1.10.5",
     "wkhtmltopdf": "^0.3.4"
-  }
+  },
 }
