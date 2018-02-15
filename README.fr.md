@@ -1,7 +1,7 @@
 # Génération de pdf à partir de données
 
 Ceci est un petit script en node qui permet de générer un pdf, à partir de données au format json et d'un template [twig](https://twig.symfony.com/).
-Il utilise [wkhtmltopdf](https://wkhtmltopdf.org/).
+Il utilise [wkhtmltopdf](https://wkhtmltopdf.org/). Il faut que wkhtmltopdf soit installé.
 
 ### Installation :
 

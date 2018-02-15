@@ -1,7 +1,7 @@
 # Template pdf generator
 
 This is a small nodejs-script that generates a pdf-file, given some data and a [twig](https://twig.symfony.com/) template.
-It uses [wkhtmltopdf](https://wkhtmltopdf.org/).
+It uses [wkhtmltopdf](https://wkhtmltopdf.org/). wkhtmltopdf has to be installed.
 
 ### Installation
 
