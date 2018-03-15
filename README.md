@@ -1,7 +1,7 @@
 # Template pdf generator
 
 This is a small nodejs-script that generates a pdf-file, given some data and a [twig](https://twig.symfony.com/) template.
-It uses [wkhtmltopdf](https://wkhtmltopdf.org/). wkhtmltopdf has to be installed.
+It uses [wkhtmltopdf](https://wkhtmltopdf.org/) through the [wkhtmltopdf node package](https://github.com/devongovett/node-wkhtmltopdf). wkhtmltopdf has to be installed.
 
 ### Installation
 
@@ -25,6 +25,12 @@ var css = 'h1 {color: red}';
 
 pdfGenerator(data, template, css).pipe(fs.createWriteStream('out.pdf'));
 ```
+
+You can also use some options:
+```
+pdfGenerator(data, template, css, options)
+```
+The `options` object is the same as documented in the [wkhtmltopdf node package](https://github.com/devongovett/node-wkhtmltopdf#options).
 
 ### Usage as a command line tool
 

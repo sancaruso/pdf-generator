@@ -1,7 +1,7 @@
 const wkhtmltopdf = require('wkhtmltopdf');
 const Twig = require('twig'), twig = Twig.twig;
 
-const pdfGenerator = function(data, template, css) {
+const pdfGenerator = function(data, template, css, options) {
   const renderedTemplate = `<html>
   <head>
     <style>${css}</style>
@@ -15,7 +15,7 @@ const pdfGenerator = function(data, template, css) {
   </html>
   `;
 
-  return wkhtmltopdf(renderedTemplate);
+  return wkhtmltopdf(renderedTemplate, options);
 }
 
 module.exports = pdfGenerator;
